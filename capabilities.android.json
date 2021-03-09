@@ -1,11 +1,11 @@
 {
     "deepLink": false,
-    "pushNotifications": true,
-    "bluetooth": true,
+    "pushNotifications": false,
+    "bluetooth": false,
     "maps": false,
     "mapsIos": false,
     "crashlytics": false,
-    "firebaseAndroid": true,
+    "firebaseAndroid": false,
     "firebaseIos": false,
-    "localNotifications": true
+    "localNotifications": false
 }

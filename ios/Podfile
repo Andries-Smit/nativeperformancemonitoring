@@ -54,6 +54,9 @@ target 'nativeTemplate' do
   use_native_modules!
   common_pods
   # Intentionally left empty
+  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
+  pod 'RNFBCrashlytics', :path => '../node_modules/@react-native-firebase/crashlytics'
+  pod 'RNFBPerf', :path => '../node_modules/@react-native-firebase/perf'
 end
 
 target 'dev' do
