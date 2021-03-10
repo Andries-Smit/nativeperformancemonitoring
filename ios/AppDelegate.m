@@ -3,12 +3,16 @@
 #import "MendixNative/MendixNative.h"
 #import "IQKeyboardManager/IQKeyboardManager.h"
 #import "SplashScreenPresenter.h"
+#import <Firebase.h>
 
 @implementation AppDelegate
 
 @synthesize shouldOpenInLastApp;
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  if ([FIRApp defaultApp] == nil) {
+      [FIRApp configure];
+  }
   [MendixAppDelegate application:application didFinishLaunchingWithOptions:launchOptions];
   [self setupUI];
   
