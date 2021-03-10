@@ -1,4 +1,7 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
 
 import com.android.build.OutputFile
 
@@ -67,6 +70,14 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+        debug {
+            FirebasePerformance {
+                // Set this flag to 'false' to disable @AddTrace annotation processing and
+                // automatic HTTP/S network request monitoring
+                // for a specific build variant at compile time.
+                instrumentationEnabled false
+            }
+        }
     }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
@@ -98,6 +109,9 @@ project.ext.vectoricons = [
 ]
 
 dependencies {
+    implementation project(':@react-native-firebase_perf')
+    implementation project(':@react-native-firebase_crashlytics')
+    implementation project(':@react-native-firebase_app')
     implementation project(':react-native-splash-screen')
     implementation project(':react-native-code-push')
     implementation project(":mendixnative-release")
