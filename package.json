@@ -16,6 +16,7 @@
     "@react-native-firebase/analytics": "^11.0.0",
     "@react-native-firebase/app": "^11.0.0",
     "@react-native-firebase/crashlytics": "^11.0.0",
+    "@react-native-firebase/messaging": "^11.0.0",
     "@react-native-firebase/perf": "^11.0.0",
     "jsc-android": "245459.0.0",
     "react": "~16.9.0",

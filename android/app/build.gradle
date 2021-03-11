@@ -109,6 +109,8 @@ project.ext.vectoricons = [
 ]
 
 dependencies {
+    implementation project(':@react-native-firebase_messaging')
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
     implementation project(':@react-native-firebase_perf')
     implementation project(':@react-native-firebase_crashlytics')
     implementation project(':@react-native-firebase_app')
