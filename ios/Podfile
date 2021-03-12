@@ -57,6 +57,8 @@ target 'nativeTemplate' do
   pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
   pod 'RNFBCrashlytics', :path => '../node_modules/@react-native-firebase/crashlytics'
   pod 'RNFBPerf', :path => '../node_modules/@react-native-firebase/perf'
+  pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
+
 end
 
 target 'dev' do
