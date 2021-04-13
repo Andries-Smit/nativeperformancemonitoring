@@ -50,10 +50,10 @@
 
 /* Begin PBXFileReference section */
 		11502903429AC2E6E69E6482 /* libPods-dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* nativeTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = nativeTemplate.app; path = NativePerforman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* NativePerforman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativePerforman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = nativeTemplate/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = nativeTemplate/Info.plist; sourceTree = "<group>"; };
-		1A0B3A922397DA2300388BF7 /* NativeTemplateDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NativeTemplateDev.app; path = NativePerforDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0B3A922397DA2300388BF7 /* NativePerforDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativePerforDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A0B3A982397DA2300388BF7 /* LaunchAppViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LaunchAppViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		1A0B3A9B2397DA2300388BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchApp.storyboard; sourceTree = "<group>"; };
 		1A0B3AD22397E15800388BF7 /* MendixApp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MendixApp.storyboard; sourceTree = "<group>"; };
@@ -240,8 +240,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* nativeTemplate.app */,
-				1A0B3A922397DA2300388BF7 /* NativeTemplateDev.app */,
+				13B07F961A680F5B00A75B9A /* NativePerforman.app */,
+				1A0B3A922397DA2300388BF7 /* NativePerforDev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 			);
 			name = nativeTemplate;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* nativeTemplate.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* NativePerforman.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1A0B3A912397DA2300388BF7 /* dev */ = {
@@ -382,7 +382,7 @@
 			);
 			name = dev;
 			productName = Dev;
-			productReference = 1A0B3A922397DA2300388BF7 /* NativeTemplateDev.app */;
+			productReference = 1A0B3A922397DA2300388BF7 /* NativePerforDev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -396,11 +396,12 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = G68K959DY9;
 						LastSwiftMigration = 1130;
 					};
 					1A0B3A912397DA2300388BF7 = {
 						CreatedOnToolsVersion = 11.2;
-						DevelopmentTeam = BC32QNM6AD;
+						DevelopmentTeam = G68K959DY9;
 						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
@@ -705,6 +706,7 @@
 				CODE_SIGN_ENTITLEMENTS = nativeTemplate/nativeTemplate.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = G68K959DY9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
@@ -780,6 +782,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = nativeTemplate/nativeTemplate.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G68K959DY9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
@@ -862,7 +865,7 @@
 				CODE_SIGN_ENTITLEMENTS = nativeTemplate/nativeTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = BC32QNM6AD;
+				DEVELOPMENT_TEAM = G68K959DY9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/MendixNative",
@@ -911,7 +914,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = BC32QNM6AD;
+				DEVELOPMENT_TEAM = G68K959DY9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/MendixNative",
@@ -997,6 +1000,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = nativeTemplate/nativeTemplate.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G68K959DY9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
@@ -1080,7 +1084,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = BC32QNM6AD;
+				DEVELOPMENT_TEAM = G68K959DY9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"${SRCROOT}/MendixNative",

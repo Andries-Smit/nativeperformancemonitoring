@@ -59,6 +59,8 @@ target 'nativeTemplate' do
   pod 'RNFBPerf', :path => '../node_modules/@react-native-firebase/perf'
   pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
 
+  pod 'RNCPushNotificationIOS', :path => '../node_modules/@react-native-community/push-notification-ios'
+
 end
 
 target 'dev' do

@@ -15,17 +15,34 @@ PODS:
     - React-Core (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/turbomodule/core (= 0.61.5)
-  - Firebase/CoreOnly (7.6.0):
-    - FirebaseCore (= 7.6.0)
-  - Firebase/Crashlytics (7.6.0):
+  - Firebase/Analytics (7.7.0):
+    - Firebase/Core
+  - Firebase/Core (7.7.0):
     - Firebase/CoreOnly
-    - FirebaseCrashlytics (~> 7.6.0)
-  - Firebase/Performance (7.6.0):
+    - FirebaseAnalytics (= 7.7.0)
+  - Firebase/CoreOnly (7.7.0):
+    - FirebaseCore (= 7.7.0)
+  - Firebase/Crashlytics (7.7.0):
     - Firebase/CoreOnly
-    - FirebasePerformance (~> 7.6.0)
+    - FirebaseCrashlytics (~> 7.7.0)
+  - Firebase/Messaging (7.7.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 7.7.0)
+  - Firebase/Performance (7.7.0):
+    - Firebase/CoreOnly
+    - FirebasePerformance (~> 7.7.0)
   - FirebaseABTesting (7.8.0):
     - FirebaseCore (~> 7.0)
-  - FirebaseCore (7.6.0):
+  - FirebaseAnalytics (7.7.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleAppMeasurement (= 7.7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30907.0)
+  - FirebaseCore (7.7.0):
     - FirebaseCoreDiagnostics (~> 7.4)
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
@@ -34,7 +51,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
-  - FirebaseCrashlytics (7.6.0):
+  - FirebaseCrashlytics (7.7.0):
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
     - GoogleDataTransport (~> 8.0)
@@ -45,7 +62,19 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
     - PromisesObjC (~> 1.2)
-  - FirebasePerformance (7.6.0):
+  - FirebaseInstanceID (7.8.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstallations (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebaseMessaging (7.7.0):
+    - FirebaseCore (~> 7.0)
+    - FirebaseInstanceID (~> 7.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/Environment (~> 7.0)
+    - GoogleUtilities/Reachability (~> 7.0)
+    - GoogleUtilities/UserDefaults (~> 7.0)
+  - FirebasePerformance (7.7.0):
     - FirebaseCore (~> 7.0)
     - FirebaseInstallations (~> 7.0)
     - FirebaseRemoteConfig (~> 7.0)
@@ -70,8 +99,18 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
+  - GoogleAppMeasurement (7.7.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30907.0)
   - GoogleDataTransport (8.2.0):
     - nanopb (~> 2.30907.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.2.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
   - GoogleUtilities/Environment (7.2.2):
     - PromisesObjC (~> 1.2)
   - GoogleUtilities/ISASwizzler (7.2.2)
@@ -79,7 +118,13 @@ PODS:
     - GoogleUtilities/Environment
   - GoogleUtilities/MethodSwizzler (7.2.2):
     - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.2.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
   - "GoogleUtilities/NSData+zlib (7.2.2)"
+  - GoogleUtilities/Reachability (7.2.2):
+    - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.2.2):
     - GoogleUtilities/Logger
   - IQKeyboardManager (6.5.6)
@@ -348,6 +393,8 @@ PODS:
     - React
   - RNCMaskedView (0.1.7):
     - React
+  - RNCPushNotificationIOS (1.8.0):
+    - React-Core
   - RNDateTimePicker (3.0.4):
     - React-Core
   - RNDeviceInfo (5.5.3):
@@ -356,15 +403,23 @@ PODS:
     - React
     - SDWebImage (~> 5.0)
     - SDWebImageWebPCoder (~> 0.4.1)
-  - RNFBApp (10.8.1):
-    - Firebase/CoreOnly (~> 7.6.0)
-    - React-Core
-  - RNFBCrashlytics (10.8.1):
-    - Firebase/Crashlytics (~> 7.6.0)
+  - RNFBAnalytics (11.0.0):
+    - Firebase/Analytics (= 7.7.0)
     - React-Core
     - RNFBApp
-  - RNFBPerf (10.8.1):
-    - Firebase/Performance (~> 7.6.0)
+  - RNFBApp (11.0.0):
+    - Firebase/CoreOnly (= 7.7.0)
+    - React-Core
+  - RNFBCrashlytics (11.0.0):
+    - Firebase/Crashlytics (= 7.7.0)
+    - React-Core
+    - RNFBApp
+  - RNFBMessaging (11.0.0):
+    - Firebase/Messaging (= 7.7.0)
+    - React-Core
+    - RNFBApp
+  - RNFBPerf (11.0.0):
+    - Firebase/Performance (= 7.7.0)
     - React-Core
     - RNFBApp
   - RNGestureHandler (1.6.0):
@@ -445,11 +500,14 @@ DEPENDENCIES:
   - ReactNativeDarkMode (from `../node_modules/react-native-dark-mode`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - "RNCPushNotificationIOS (from `../node_modules/@react-native-community/push-notification-ios`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFastImage (from `../node_modules/react-native-fast-image`)
+  - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBCrashlytics (from `../node_modules/@react-native-firebase/crashlytics`)"
+  - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
   - "RNFBPerf (from `../node_modules/@react-native-firebase/perf`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNInAppBrowser (from `../node_modules/react-native-inappbrowser-reborn`)
@@ -467,12 +525,16 @@ SPEC REPOS:
     - boost-for-react-native
     - Firebase
     - FirebaseABTesting
+    - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCrashlytics
     - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
     - FirebasePerformance
     - FirebaseRemoteConfig
+    - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
     - IQKeyboardManager
@@ -576,16 +638,22 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/async-storage"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
+  RNCPushNotificationIOS:
+    :path: "../node_modules/@react-native-community/push-notification-ios"
   RNDateTimePicker:
     :path: "../node_modules/@react-native-community/datetimepicker"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNFastImage:
     :path: "../node_modules/react-native-fast-image"
+  RNFBAnalytics:
+    :path: "../node_modules/@react-native-firebase/analytics"
   RNFBApp:
     :path: "../node_modules/@react-native-firebase/app"
   RNFBCrashlytics:
     :path: "../node_modules/@react-native-firebase/crashlytics"
+  RNFBMessaging:
+    :path: "../node_modules/@react-native-firebase/messaging"
   RNFBPerf:
     :path: "../node_modules/@react-native-firebase/perf"
   RNGestureHandler:
@@ -614,16 +682,20 @@ SPEC CHECKSUMS:
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: aaeaf388755e4f29cd74acbc9e3b8da6d807c37f
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
-  Firebase: e1e089d9aac215a52442583f818ab61de3c4581b
+  Firebase: cd2ab85eec8170dc260186159f21072ecb679ad5
   FirebaseABTesting: 44acbfc9db915bca8f111ebae342da6fd4f1cc55
-  FirebaseCore: 0a43b7f1c5b36f3358cd703011ca4c7e0df55870
+  FirebaseAnalytics: f3f8f75de34fe04141a69bb1c4bd7e24a80178e1
+  FirebaseCore: ac35d680a0bf32319a59966a1478e0741536b97b
   FirebaseCoreDiagnostics: 066f996579cf097bdad3d7dc9a918d6b9e129c50
-  FirebaseCrashlytics: 1e87b25303b1840b3c99c37ee427c3e9564a4be1
+  FirebaseCrashlytics: 47af228115805e190b566db12c028263531b8ce0
   FirebaseInstallations: 7f7ed0e7e27fb51f57291e1876e2ddb1524126c1
-  FirebasePerformance: bd70a911919ab62b6a4a51728fadb901406b0a13
+  FirebaseInstanceID: aaecc93b4528bbcafea12c477e26827719ca1183
+  FirebaseMessaging: ce33c2537fdda1d1a4bc82b2245e3c3bf9107684
+  FirebasePerformance: 793dde6a0eafddfebde18af277f29c044e6b0023
   FirebaseRemoteConfig: 0d7a7e45c23bfaa1f299c768b3c357ae3a5bc9d5
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
+  GoogleAppMeasurement: 0c3b134b2c0a90c4c24833873894bfe0e42a0384
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
   GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
@@ -671,12 +743,15 @@ SPEC CHECKSUMS:
   ReactNativeDarkMode: 0178ffca3b10f6a7c9f49d6f9810232b328fa949
   RNCAsyncStorage: 00bdf63f7f1e0f11d3323533dba4f222e58bf092
   RNCMaskedView: 90dd32f5b786bd562e876e1421ea77c700cbf71e
+  RNCPushNotificationIOS: 5b1cf9ad2aaa107ecb92d5d2d7005ba521b2b97a
   RNDateTimePicker: 88dc10d685ce961339bad3353c64db96c5abd19b
   RNDeviceInfo: 67607dfe9cfbed105838144c40187a8392aa404d
   RNFastImage: 35ae972d6727c84ee3f5c6897e07f84d0a3445e9
-  RNFBApp: 02bde3edecf2e9694b908a5d3504e03449980f20
-  RNFBCrashlytics: 0e6347d4e2251c6656b43ce8544662d1bac7deff
-  RNFBPerf: 4d6ab97701da4aeb51da94117bf4026a0c3a5843
+  RNFBAnalytics: 6a5f53ef0621a993b324a2019b637a3a10647574
+  RNFBApp: 1624ffcfc328c00ec3049d2f1bbf09d3e78dcdb7
+  RNFBCrashlytics: 9dda657f72f488b5112d02c6d96e86840f90dab6
+  RNFBMessaging: 43d7ae1f8b93d20ad3194cac3e31ca446d4e9828
+  RNFBPerf: 07bb6302bb9f55d9ec03c779f368cffdb9f25969
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNInAppBrowser: b51ad29a3cfe36a9a55866d42fc169aa7db8522e
   RNLocalize: d8025bb1ac74c0ad54155ea9862538624ebf74d8
@@ -690,6 +765,6 @@ SPEC CHECKSUMS:
   TouchID: ba4c656d849cceabc2e4eef722dea5e55959ecf4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 0158359dc7ff1d57d9c2e4888accc3db9462d6bc
+PODFILE CHECKSUM: a7b079546e8cd82d943a70d528a58ec475368489
 
 COCOAPODS: 1.10.0
